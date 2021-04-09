@@ -2,6 +2,7 @@ $(document).ready(onReady);
 
 function onReady(){
     $('#submit').on('click', handleSubmit);
+    $('#employeeTable').on('click', '.delete', deleteEmployee);
 }
 
 function handleSubmit(){
@@ -35,4 +36,8 @@ function clearInputs(){
     $('#idIn').val('');
     $('#titleIn').val('');
     $('#annualSalaryIn').val('');
+}
+
+function deleteEmployee(){
+    $(this).closest('tr').remove();
 }
