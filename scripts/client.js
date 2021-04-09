@@ -22,6 +22,9 @@ function addEmployee(){
     
     totalSalary += annualSalary;
     $('#totalMonthlyOut').empty().append(totalSalary);
+    if(totalSalary >= 20000){
+        addRedBackground();
+    }
 
     $('#employeeTable').append(`
         <tr>
@@ -45,4 +48,8 @@ function clearInputs(){
 
 function deleteEmployee(){
     $(this).closest('tr').remove();
+}
+
+function addRedBackground(){
+    $('#totalMonthlyOut').addClass('red');
 }
