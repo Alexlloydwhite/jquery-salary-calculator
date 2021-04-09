@@ -3,3 +3,4 @@ console.log('JS');
 function onReady(){
     console.log('JQ');
 }
+

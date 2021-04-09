@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+header {
+    text-align: center;
+    background-color: lightgrey;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+main{
+    width: 80%;
+    margin: auto;
+}
+button{
+    float: right;
+}
