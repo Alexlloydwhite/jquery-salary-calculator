@@ -14,3 +14,19 @@ main{
 .red{
     background-color: red;
 }
+
+td, th {
+    text-align: left;
+    padding: 15px;
+}
+tr:nth-child(even){
+    background-color: lightgrey;
+}
+td{
+    margin: 0;
+    border: none;
+}
+
+#totalMonthly{
+    align-self: right;
+}

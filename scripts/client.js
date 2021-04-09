@@ -21,8 +21,9 @@ function addEmployee(){
     let annualSalary = Number($('#annualSalaryIn').val());
     
     totalSalary += annualSalary;
-    $('#totalMonthlyOut').empty().append(totalSalary);
-    if(totalSalary >= 20000){
+    let monthlySalary = totalSalary / 12;
+    $('#totalMonthlyOut').empty().append(monthlySalary);
+    if(monthlySalary >= 20000){
         addRedBackground();
     }
 
