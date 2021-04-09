@@ -5,6 +5,8 @@ function onReady(){
     $('#employeeTable').on('click', '.delete', deleteEmployee);
 }
 
+let totalSalary = 0;
+
 function handleSubmit(){
     addEmployee();
     clearInputs();
@@ -16,13 +18,16 @@ function addEmployee(){
     let lastName = $('#lastNameIn').val();
     let id = $('#idIn').val();
     let title = $('#titleIn').val();
-    let annualSalary = $('#annualSalaryIn').val();
+    let annualSalary = Number($('#annualSalaryIn').val());
     
+    totalSalary += annualSalary;
+    $('#totalMonthlyOut').empty().append(totalSalary);
+
     $('#employeeTable').append(`
         <tr>
             <td>${firstName}</td>
             <td>${lastName}</td>
-            td>${id}</td>
+            <td>${id}</td>
             <td>${title}</td>
             <td>${annualSalary}</td>
             <td><button class="delete">Delete</button></td>   
