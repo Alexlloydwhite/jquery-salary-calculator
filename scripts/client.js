@@ -5,6 +5,11 @@ function onReady(){
 }
 
 function handleSubmit(){
+    addEmployee();
+    clearInputs();
+}
+
+function addEmployee(){
     console.log('Adding Employee'); 
     let firstName = $('#firstNameIn').val();
     let lastName = $('#lastNameIn').val();
@@ -13,13 +18,21 @@ function handleSubmit(){
     let annualSalary = $('#annualSalaryIn').val();
     
     $('#employeeTable').append(`
-            <tr>
-                <td>${firstName}</td>
-                <td>${lastName}</td>
-                <td>${id}</td>
-                <td>${title}</td>
-                <td>${annualSalary}</td>
-                <td><button class="delete">Delete</button></td>   
-            </tr>
-        `);
+        <tr>
+            <td>${firstName}</td>
+            <td>${lastName}</td>
+            td>${id}</td>
+            <td>${title}</td>
+            <td>${annualSalary}</td>
+            <td><button class="delete">Delete</button></td>   
+        </tr>
+    `);
+}
+
+function clearInputs(){
+    $('#firstNameIn').val('');
+    $('#lastNameIn').val('');
+    $('#idIn').val('');
+    $('#titleIn').val('');
+    $('#annualSalaryIn').val('');
 }
