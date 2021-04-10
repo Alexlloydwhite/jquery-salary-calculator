@@ -17,9 +17,9 @@
     <main>
         <section id="employee-in">
             <h2>Add Employee</h2>
+            <input id="idIn" type="text" placeholder="ID">
             <input id="firstNameIn" type="text" placeholder="First Name">
             <input id="lastNameIn" type="text" placeholder="Last Name">
-            <input id="idIn" type="text" placeholder="ID">
             <input id="titleIn" type="text" placeholder="Title">
             <input id="annualSalaryIn" type="text" placeholder="Annual Salary">
             <button id="submit">Submit</button>
@@ -31,47 +31,32 @@
             <table>
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>First Name</th>
                         <th>Last Name</th>
-                        <th>ID</th>
                         <th>Title</th>
                         <th>Annual Salary</th>
                         <th>&nbsp;</th>
                     </tr>
                 </thead>
-            
-            <tbody id="employeeTable">
-                <tr>
-                    <td>Jen</td>
-                    <td>Barber</td>
-                    <td>4521</td>
-                    <td>Team Lead</td>
-                    <td>80000</td>
-                    <td><button class="delete">Delete</button></td>   
-                </tr>
-                <tr>
-                    <td>Maurice</td>
-                    <td>Moss</td>
-                    <td>8724</td>
-                    <td>Support Team</td>
-                    <td>58000</td>
-                    <td><button class="delete">Delete</button></td>   
-                </tr>
-                <tr>
-                    <td>Roy</td>
-                    <td>Smith</td>
-                    <td>9623</td>
-                    <td>Quality Assurance</td>
-                    <td>48000</td>
-                    <td><button class="delete">Delete</button></td>   
-                </tr>
-            </tbody>
-            
+                <tbody id="employeeTable">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>Total: $ <span id="totalMonthlyOut"></span></td>
+                        <td>&nbsp;</td>   
+                    </tr>
+                </tfoot>
             </table>
-
-            <h2 id="totalMonthly">Total Monthly: $ <span id="totalMonthlyOut"></span></h2>
-        
         </section>
     </main>
+
+    <footer>
+        <h5>Created By Alex White at Prime Digital Academy</h5>
+    </footer>
 </body>
 </html>

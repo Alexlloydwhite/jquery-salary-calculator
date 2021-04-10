@@ -1,11 +1,17 @@
 body {
     margin: 0;
 }
-header {
+header, footer {
     text-align: center;
-    background-color: lightgrey;
+    background-color:#4D6E5A;
     margin-bottom: 2rem;
     padding: 1rem;
+    color: whitesmoke;
+}
+footer{
+    padding: .01rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
 }
 main{
     width: 80%;
@@ -20,13 +26,28 @@ td, th {
     padding: 15px;
 }
 tr:nth-child(even){
-    background-color: lightgrey;
+    background-color: #EEEEEE
 }
 td{
     margin: 0;
     border: none;
 }
-
-#totalMonthly{
-    align-self: right;
+thead{
+    background-color:lightgrey;
+}
+table{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2{
+    text-align: center;
+    color: #4D6E5A;
+}
+input{
+    padding: 5px;
+    border-radius: 10px;
+}
+button{
+    cursor:pointer;
 }
