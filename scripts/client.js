@@ -56,7 +56,7 @@ function showEmployees(){
     for(let employee of employees){
         $('#employeeTable').append(`
         <tr>
-            <td>${employee.id}</td>
+            <td id="id">${employee.id}</td>
             <td>${employee.firstName}</td>
             <td>${employee.lastName}</td>
             <td>${employee.title}</td>
@@ -100,8 +100,10 @@ function clearInputs(){
 
 function deleteEmployee(){
     // finds the row containing the delete button and removes that object from the array
-    let val = $(this).closest('tr').text();
-    let index = employees.findIndex(function(employee) {return employee.annualSalary = val});
+    let val = $(this).closest('tr').children('#id').text();
+
+    let index = employees.findIndex(function(item) {return item.id == val})
+    
     employees.splice(index, 1);
     
     //update DOM to show removal
