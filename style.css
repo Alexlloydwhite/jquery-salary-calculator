@@ -1,5 +1,9 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
-    margin: 0;
+    margin: 0 0 100px;
 }
 header, footer {
     text-align: center;
@@ -9,9 +13,13 @@ header, footer {
     color: whitesmoke;
 }
 footer{
-    padding: .01rem;
-    margin-top: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
     margin-bottom: 0;
+
 }
 main{
     width: 80%;

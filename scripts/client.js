@@ -102,6 +102,7 @@ function deleteEmployee(){
     // finds the row containing the delete button and removes that object from the array
     let val = $(this).closest('tr').children('#id').text();
 
+    
     let index = employees.findIndex(function(item) {return item.id == val})
     
     employees.splice(index, 1);
