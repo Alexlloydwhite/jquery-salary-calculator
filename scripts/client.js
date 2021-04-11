@@ -63,27 +63,33 @@ function showEmployees(){
             <td>${employee.annualSalary}</td>
             <td><button class="delete">Delete</button></td>   
         </tr>`);
-    }
+    } // end for loop
 
+    // updates the total salary on the DOM
     calculateSalary();
 }
 
 function calculateSalary(){
-   
+    // sets varibale totalSalary to change within function
     let totalSalary = 0;
     
+    //loops thru employees array and adds their annual salary to the total salary
     for (employee of employees){
         totalSalary += Number(employee.annualSalary);
-    }
+    } // end for loop
     
+    // appends the total monthly salary to the DOM
     $('#totalMonthlyOut').empty().append(Math.round(totalSalary /12 ));
+    // check if the total monthly salary is at or above 20000, if it is
+    // the background color of total: changes to red.
     
     if (totalSalary /12 >= 20000){
-        addRedBackground();
-    }
+        $('#totalMonthlyOut').addClass('red');
+    } else {
+        $('#totalMonthlyOut').removeClass('red');
+    } // end if 
 }
 
-// clears inputs
 function clearInputs(){
     $('#firstNameIn').val('');
     $('#lastNameIn').val('');
@@ -93,8 +99,14 @@ function clearInputs(){
 }
 
 function deleteEmployee(){
-    $(this).closest('tr').remove();
-}
+    // finds the row containing the delete button and removes that object from the array
+    let val = $(this).closest('tr').text();
+    let index = employees.findIndex(function(employee) {return employee.annualSalary = val});
+    employees.splice(index, 1);
+    
+    //update DOM to show removal
+    showEmployees();
+} 
 
 function addRedBackground(){
     $('#totalMonthlyOut').addClass('red');

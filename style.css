@@ -50,4 +50,6 @@ input{
 }
 button{
     cursor:pointer;
+    padding: 5px;
+    border-radius: 10px;
 }
