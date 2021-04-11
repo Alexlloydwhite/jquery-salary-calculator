@@ -60,7 +60,7 @@ function showEmployees(){
             <td>${employee.firstName}</td>
             <td>${employee.lastName}</td>
             <td>${employee.title}</td>
-            <td>${employee.annualSalary}</td>
+            <td>$${employee.annualSalary}</td>
             <td><button class="delete">Delete</button></td>   
         </tr>`);
     } // end for loop

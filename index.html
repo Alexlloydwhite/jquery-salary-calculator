@@ -17,11 +17,11 @@
     <main>
         <section id="employee-in">
             <h2>Add Employee</h2>
-            <input id="idIn" type="text" placeholder="ID">
+            <input id="idIn" type="text" placeholder="ID" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
             <input id="firstNameIn" type="text" placeholder="First Name">
             <input id="lastNameIn" type="text" placeholder="Last Name">
             <input id="titleIn" type="text" placeholder="Title">
-            <input id="annualSalaryIn" type="text" placeholder="Annual Salary">
+            <input id="annualSalaryIn" type="text" placeholder="Annual Salary" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
             <button id="submit">Submit</button>
         </section>
 
