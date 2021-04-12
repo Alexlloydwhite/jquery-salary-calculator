@@ -115,6 +115,8 @@ function clearInputs(){
 function deleteEmployee(){
     // finds the row containing the delete button and removes that object from the array
     let val = $(this).closest('tr').children('#id').text();
+    // you can also asign a class to each id and use .find('.idclass) 
+    // this replaces .children();
 
     // assign index to the ID number of the row to be deleted
     let index = employees.findIndex(function(item) {return item.id == val})
