@@ -126,6 +126,3 @@ function deleteEmployee(){
     showEmployees();
 } 
 
-function addRedBackground(){
-    $('#totalMonthlyOut').addClass('red');
-}
